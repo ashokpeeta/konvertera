@@ -1,17 +1,15 @@
-const allCountriesData = import('./countries-all.json');
-const countries_API_URL = "https://restcountries.eu/rest/v2/name/"
+const countries_API_URL = "https://restcountries.eu/rest/v2/"
+const byName = "name/"
+const all = "all"
 export const getAllCountries = async () => {
-    // loaded all countries data from a JSON instead of xhr for brevity
-    return (await allCountriesData).default;
+    const response = await fetch(`${countries_API_URL}${all}`, {
+        method: 'GET',
+    });
+    return response.json();
 }
 
 export const getCountryByName = async (countryName, fullText = false) => {
-    /*
-        we can use allCountriesData to filter by countryName
-        instead we are making an xhr using fetch api to load
-        the country data
-    */
-    const response = await fetch(`${countries_API_URL}${countryName}?fullText=${fullText}`, {
+    const response = await fetch(`${countries_API_URL}${byName}${countryName}?fullText=${fullText}`, {
         method: 'GET',
     });
     return response.json();
