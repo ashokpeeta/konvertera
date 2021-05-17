@@ -6,6 +6,18 @@
     * [Rest countries](https://www.getpostman.com/collections/bcbf54947b0f6d6d91cc)
 * I have created a github repository to show my git etiquette at [Konvertera Github link](https://github.com/ashokpeeta/konvertera)
 
+# Provided the time I might have implemented the following
+* would have used react-app-polyfill if support required for IE 9,10,11
+* configure eslint and use git hooks package like husky to lint on commits
+* Integrate Storybook which allows the user to browse component library, test and develop
+* Integrate React-router for routing in the application
+* Integrate Redux for state management if we want to share data between different disjoint components
+* Setting up the debugger for tests in VSCode
+* Write centralised files for handling the side effects(xhr) and errors
+*  Take care of BigInit using polyfill to accomodate high precision integers for conversion
+* written unit tests, integration and e2e tests
+* tried to implement the app conforming to RWD would have taken few more time for any css related changes
+
 # Bootstrapping the application
 ### This app is created using the create react app tool chain and it documentation is as follows
 > # Getting Started with Create React App
