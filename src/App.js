@@ -6,10 +6,12 @@ import { useState, useEffect } from 'react';
 import { getAllCountries, getCountryByName } from "./services/countries";
 
 function App() {
+  const [hasSearched, setHasSearched] = useState(false);
   const [selection, setSelection] = useState("search");
   const [countryData, setCountryData] = useState([]);
   const [isSearching, setIsSearching] = useState(false);
   const handleGetAllCountries = async () => {
+    setIsSearching(true);
     await getAllCountries().then(data => {
       if (data?.status === 404) {
         setCountryData([])
@@ -17,6 +19,7 @@ function App() {
         setCountryData(data)
       }
       setIsSearching(false);
+      setHasSearched(true);
     });
   }
   useEffect(() => {
@@ -36,6 +39,7 @@ function App() {
           setCountryData(data)
         }
         setIsSearching(false);
+        setHasSearched(true);
       });
     }
   }
@@ -48,7 +52,8 @@ function App() {
         onSearch={onSearch}
       />
       <CountryList
-        countryData={countryData}
+        hasSearched={hasSearched}
+        countries={countryData}
         isSearching={isSearching}
       />
     </div>

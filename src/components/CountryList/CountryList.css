@@ -1,0 +1,43 @@
+.countryList {
+    margin: 20px;
+}
+
+.site-collapse-custom-collapse .site-collapse-custom-panel,
+.site-collapse-custom-collapse .site-collapse-custom-panel {
+  margin-bottom: 24px;
+  overflow: hidden;
+  background: #f7f7f7;
+  border: 0px;
+  border-radius: 2px;
+}
+
+.ant-collapse-content .ant-card-body {
+    padding: 0px;
+}
+
+.currency {
+    margin-bottom: 0px;
+    font-size: 48px;
+    flex-grow: 1;
+    color: #fff;
+    text-align: center;
+}
+.leftContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #1890ff;
+}
+.middleContainer{
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+@media screen and (max-width: 576px) {
+    .middleContainer {
+        border-right: none;
+    }
+    .conversionContainer {
+        border-top: 1px solid #ccc;
+    }
+}
