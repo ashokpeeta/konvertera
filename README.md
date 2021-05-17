@@ -1,3 +1,8 @@
+# How to run
+* after downloading this repo run ``` npm install ``` in the root folder
+* to run the application run ``` npm run start ``` and the application should be open on your default browser at ``` localhost:3000 ```
+* If the application didn't start automatically open a browser and go to ``` localhost:3000 ``` to view the application
+
 # Implementation
 ### The implementation is done as follows
 * I have bootstrapped the front end of the application using the Create React App and it's documentation is given in [Bootstrapping the application section](#bootstrapping-the-application)
@@ -17,6 +22,10 @@
 *  Take care of BigInit using polyfill to accomodate high precision integers for conversion
 * written unit tests, integration and e2e tests
 * tried to implement the app conforming to RWD would have taken few more time for any css related changes
+* would have integrated a css-preprocessor like SASS or LESS
+* would have implemented i18n 
+* would have implemented themes
+* would have implemented optimizing the production build after looking at the webvitals.
 
 # Bootstrapping the application
 ### This app is created using the create react app tool chain and it documentation is as follows
